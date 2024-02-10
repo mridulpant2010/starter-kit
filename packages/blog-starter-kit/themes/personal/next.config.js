@@ -73,20 +73,30 @@ const config = {
 		],
 	},
 	async rewrites() {
+		// return [
+		// 	{
+		// 		source: '/ping/data-event',
+		// 		destination: `${ANALYTICS_BASE_URL}/api/data-event`,
+		// 	},
+		// 	{
+		// 		source: '/ping/view',
+		// 		destination: `${ANALYTICS_BASE_URL}/api/view`,
+		// 	},
+		// 	{
+		// 		source: '/api/collect',
+		// 		destination: `${ADVANCED_ANALYTICS_BASE_URL}/api/collect`,
+		// 	},
+		// ];
 		return [
 			{
-				source: '/ping/data-event',
-				destination: `${ANALYTICS_BASE_URL}/api/data-event`,
+			  source: "/blog",
+			  destination: "starter-kit-lilac.vercel.app/blog",
 			},
 			{
-				source: '/ping/view',
-				destination: `${ANALYTICS_BASE_URL}/api/view`,
+			  source: "/blog/:path*",
+			  destination: "starter-kit-lilac.vercel.app/blog/:path*",
 			},
-			{
-				source: '/api/collect',
-				destination: `${ADVANCED_ANALYTICS_BASE_URL}/api/collect`,
-			},
-		];
+		  ];
 	},
 	async redirects() {
 		return await getRedirectionRules();
