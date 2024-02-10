@@ -90,11 +90,11 @@ const config = {
 		return [
 			{
 			  source: "/blog",
-			  destination: "starter-kit-lilac.vercel.app/blog",
+			  destination: "https://starter-kit-lilac.vercel.app/blog",
 			},
 			{
 			  source: "/blog/:path*",
-			  destination: "starter-kit-lilac.vercel.app/blog/:path*",
+			  destination: "https://starter-kit-lilac.vercel.app/blog/:path*",
 			},
 		  ];
 	},
